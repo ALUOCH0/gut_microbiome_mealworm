@@ -1,0 +1,21 @@
+# Ignore raw data
+raw_fastq/
+
+# Ignore results
+results/
+
+# Ignore logs
+logs/
+
+# Ignore QIIME2 artifacts
+*.qza
+*.qzv
+
+# Ignore compressed files
+*.gz
+*.zip
+*.tar
+*.tar.gz
+
+# Ignore conda environments
+env/
