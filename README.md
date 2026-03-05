@@ -1,10 +1,10 @@
 
-##Project Name: Gut microbiome analysis of mealworm( ONT sequences)
+#Project Name: Gut microbiome analysis of mealworm( ONT sequences)
  
 ##project overview 
 This project analyses the gut microbiome of mealworms across their lifecycle using Oxford Nanopore Technologies (ONT) sequencing using the #q2ONT pipeline .
  
-##The project structure 
+#The project structure 
 gut_microbiome_mealworm/              #the parent project folder 
 │
 ├── config.sh
