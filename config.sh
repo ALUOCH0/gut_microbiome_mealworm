@@ -1,21 +1,40 @@
 #!/bin/bash
+# ==============================================================================
+# PROJECT CONFIGURATION
+# ==============================================================================
 
-PROJECT_NAME="Gut microbiome analysis of mealworm"
-SPECIES="Tenebrio molitor"
-THREADS=8
+# Project  directory 
+PROJECT_DIR="/home/maluoch/gut_microbiome_mealworm"
 
-# Input data
-FASTQ_DIR="raw_fastq"
+# Folder paths
+FASTQ_DIR="$PROJECT_DIR/raw_fastq"
+RESULTS_DIR="$PROJECT_DIR/results"
+STEPS_DIR="$PROJECT_DIR/steps"
+LOGS_DIR="$PROJECT_DIR/logs"
 
 # Reference files 
-REFERENCE_SEQS="reference/silva-138-99-seqs.qza"
-CLASSIFIER="reference/silva-138-99-nb-classifier.qza"
+REFERENCE_SEQS="$PROJECT_DIR/reference/silva-138-99-seqs.qza"
+CLASSIFIER="$PROJECT_DIR/reference/silva-138-99-nb-classifier.qza"
 
-# QIIME2 environment
-QIIME_ENV="qiime2-2023.5"
+# ==============================================================================
+# COMPUTATIONAL RESOURCES & PARAMETERS
+# ==============================================================================
 
-# Clustering identity
+# Clustering percentage identity
 CLUSTER_IDENTITY=0.85
+
+# ==============================================================================
+# QIIME 2 ENVIRONMENT
+# ==============================================================================
+# Path to your Conda installation
+CONDA_INSTALL_PATH="$HOME/anaconda3"
+ENV_NAME="qiime2-2023.5"
+
+#threads 
+THREADS=1
+
+
+# ==============================================================================
 
 # Length filtering
 MIN_LENGTH=500
