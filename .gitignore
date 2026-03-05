@@ -19,3 +19,4 @@ logs/
 
 # Ignore conda environments
 env/
+qiime2-2023.5-py38-linux-conda.yml
