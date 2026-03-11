@@ -1,7 +1,7 @@
 
-Project Name: Gut microbiome analysis of mealworm( ONT sequenecs ) 
+#Project Name: Gut microbiome analysis of mealworm( ONT sequenecs ) 
 
-This project analyses the gut microbiome of Tenebrio molitor (mealworm) across their developmental lifecycle using Oxford Nanopore Technology 16S sequencing data. The workflow has been implemented uisng the QIIME2 ONT compatible pipeine (q2ONT) to process long reads sequences ,quality control , cluster sequences and assign taxonomy using the SILVA 138 reference databases. The pipeine aims to generate microbial community profiles that enables comparison of microbiome composition across different mealworm developmental stages.
+This project analyses the gut microbiome of Tenebrio molitor (mealworm) across their developmental lifecycle using Oxford Nanopore Technology 16S sequencing data. The workflow has been implemented using the QIIME2 ONT compatible pipeline (q2ONT) to process long reads sequences ,quality control , cluster sequences and assign taxonomy using the SILVA 138 reference databases. The pipeine aims to generate microbial community profiles that enables comparison of microbiome composition across different mealworm developmental stages.
          
 # Requirements
  conda(miniconda 26.1.1)
