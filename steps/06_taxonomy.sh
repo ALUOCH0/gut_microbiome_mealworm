@@ -4,8 +4,8 @@
 #SBATCH --error=/home/maluoch/gut_microbiome_mealworm/logs/taxonomy_%j.err
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=16
-#SBATCH --mem=120G
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=200G
 #SBATCH --partition=debug
 
 # ==============================================================================
@@ -13,12 +13,11 @@
 # Move to the project directory
 cd /home/maluoch/gut_microbiome_mealworm
 
-# Load configuration variables
-source config.sh
+# Load conda
+source /opt/apps/qiime2/conda/etc/profile.d/conda.sh
 
-# Initialize Conda and activate the environment using the variable from config.sh
-source $(conda info --base)/etc/profile.d/conda.sh
-conda activate $ENV_NAME
+# Activate QIIME2 environment
+conda activate qiime2-2023.5
 
 # Ensure log directory exists
 mkdir -p logs
@@ -29,7 +28,7 @@ echo "Starting Taxonomy Classification: $(date)"
 qiime feature-classifier classify-sklearn \
   --i-classifier reference/silva-138-99-nb-classifier.qza \
   --i-reads results/05.seqs-clusters.qza \
-  --p-n-jobs 16 \
+  --p-n-jobs 8 \
   --o-classification results/06.taxonomy.qza
 
 echo "Classification complete: $(date)"

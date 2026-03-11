@@ -1,32 +1,9 @@
 
-#Project Name: Gut microbiome analysis of mealworm( ONT sequences)
- 
-##project overview 
-This project analyses the gut microbiome of mealworms across their lifecycle using Oxford Nanopore Technologies (ONT) sequencing using the #q2ONT pipeline .
- 
-#The project structure 
-gut_microbiome_mealworm/              #the parent project folder 
-│
-├── config.sh
-├── raw_fastq/                 # Raw Nanopore FASTQ files (82 barcodes)
-├── reference/                 # SILVA reference database
-│   ├── silva-138-99-seqs.qza
-│   └── silva-138-99-nb-classifier.qza
-├── steps/                     # Pipeline scripts
-│   ├── 01_qc.sh
-│   ├── 02_import.sh
-│   ├── 03_derep.sh
-│   ├── 04_chimera.sh
-│   ├── 05_cluster.sh
-│   ├── 06_taxonomy.sh
-│   └── 07_export.sh
-│
-├── results/                   # Generated outputs
-├── logs/                      # SLURM job logs (.out / .err)
-│
-└── Readme.md     #documentation of the workflow 
+Project Name: Gut microbiome analysis of mealworm( ONT sequenecs ) 
+
+This project analyses the gut microbiome of Tenebrio molitor (mealworm) across their developmental lifecycle using Oxford Nanopore Technology 16S sequencing data. The workflow has been implemented uisng the QIIME2 ONT compatible pipeine (q2ONT) to process long reads sequences ,quality control , cluster sequences and assign taxonomy using the SILVA 138 reference databases. The pipeine aims to generate microbial community profiles that enables comparison of microbiome composition across different mealworm developmental stages.
          
-## Requirements
+# Requirements
  conda(miniconda 26.1.1)
  q2cli version 2023.5.1
  Trimomantic version 0.40
@@ -34,7 +11,7 @@ gut_microbiome_mealworm/              #the parent project folder
  Nanoplot  
  SILVA 138 reference database 
 
-## Workflow
+# Workflow
 
 1. **01_qc.sh** – Perform quality control on raw FASTQ files.
 2. **02_import.sh** – Import sequences into QIIME2 artifacts.

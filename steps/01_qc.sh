@@ -26,7 +26,7 @@ echo "======================================================"
 echo "Running NanoPlot on trimmed reads ..."
 echo "===================================================="
 
-/home/aluoc/miniconda3/envs/nanoplot_env/bin/NanoPlot -t "$THREADS" \
+~/.conda/envs/qiime2-2023.5/bin/NanoPlot -t "$THREADS" \
          -o ../results/01_QC/nanoplot_post_trim \
          --fastq ../results/01_QC/*_trimmed.fastq
 
